@@ -1,0 +1,19 @@
+.container {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all linear 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.15);
+  }
+
+  .image {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+}
+
+.link:hover {
+  text-decoration: none;
+}

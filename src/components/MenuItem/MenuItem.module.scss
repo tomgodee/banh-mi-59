@@ -1,0 +1,82 @@
+.titleMenu {
+  padding-left: 48px;
+
+  &::before {
+    content: "";
+    width: 80px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--orange-500);
+  }
+
+  &::after {
+    content: "⭐";
+    position: absolute;
+    left: 0;
+    top: 14px;
+  }
+}
+
+.titleBestseller {
+  padding-left: 48px;
+
+  &::before {
+    content: "";
+    width: 80px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--orange-500);
+  }
+
+  &::after {
+    content: "❤️";
+    position: absolute;
+    left: 0;
+    top: 14px;
+  }
+}
+
+.menuItemContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 420px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  // &::before {
+  //   background-color: rgba(0, 0, 0, 0.2);
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   content: "";
+  //   display: block;
+  // }
+
+  .menuItemImage {
+    width: 100%;
+    height: 420px;
+    transition: all 0.4s linear;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .menuItemTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: mintcream;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+  }
+}

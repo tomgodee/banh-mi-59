@@ -1,0 +1,15 @@
+.titleMenu {
+  &::before {
+    content: "";
+    width: 80px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--orange-500);
+  }
+}
+
+.gap {
+  row-gap: 20px;
+}
