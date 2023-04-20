@@ -5,7 +5,7 @@ import FoodItem from "@/components/FoodItem";
 import FoodModal from "@/components/FoodModal";
 import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 
-import { baguetteItems, bunboItems, drinkItems } from "./database";
+import { baguetteItems, bunboItems, drinkItems } from "@/database";
 import styles from "./menu.module.scss";
 
 import type { Food } from "@/types";
