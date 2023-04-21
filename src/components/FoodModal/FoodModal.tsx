@@ -39,13 +39,13 @@ export const FoodModal = (props: FoodModalProps) => {
       <ModalOverlay />
       <ModalContent>
         <ModalCloseButton />
-        <ModalBody>
-          <Flex
-            gap={8}
-            py={4}
-            flexDirection={screenSize === "sm" ? "column" : "row"}
-          >
-            <Box width="50%">
+        <ModalBody
+          px={6}
+          pt={screenSize === "sm" ? 12 : 6}
+          pb={screenSize === "sm" ? 6 : 4}
+        >
+          <Flex gap={8} flexDirection={screenSize === "sm" ? "column" : "row"}>
+            <Box width={screenSize === "sm" ? "100%" : "50%"}>
               <Image
                 className={styles.image}
                 src={getImage(food.image)}

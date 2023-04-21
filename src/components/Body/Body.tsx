@@ -57,7 +57,22 @@ const foods = [
     image: "traditional_baguette",
     ingredients: [
       {
+        name: "Pork",
+      },
+      {
+        name: "Pâté",
+      },
+      {
         name: "Lettuce",
+      },
+      {
+        name: "Cucumber",
+      },
+      {
+        name: "Mayonnaise (Optional)",
+      },
+      {
+        name: "Chilli (Optional)",
       },
     ],
   },
