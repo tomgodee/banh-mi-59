@@ -13,9 +13,6 @@ export const baguetteItems: Food[] = [
         name: "Lettuce",
       },
       {
-        name: "Coriander",
-      },
-      {
         name: "Onion",
       },
       {
@@ -39,9 +36,6 @@ export const baguetteItems: Food[] = [
       },
       {
         name: "Lettuce",
-      },
-      {
-        name: "Coriander",
       },
       {
         name: "Cucumber",
@@ -88,9 +82,6 @@ export const baguetteItems: Food[] = [
         name: "Lettuce",
       },
       {
-        name: "Coriander",
-      },
-      {
         name: "Cucumber",
       },
       {
@@ -113,9 +104,6 @@ export const baguetteItems: Food[] = [
         name: "Lettuce",
       },
       {
-        name: "Coriander",
-      },
-      {
         name: "Cucumber",
       },
       {
@@ -127,21 +115,15 @@ export const baguetteItems: Food[] = [
     ],
   },
   {
-    name: "Sausage Baguette",
+    name: "Ham Baguette",
     price: "30.000đ",
-    image: "sausage_baguette",
+    image: "ham_baguette",
     ingredients: [
-      {
-        name: "Sausage",
-      },
       {
         name: "Ham",
       },
       {
         name: "Lettuce",
-      },
-      {
-        name: "Coriander",
       },
       {
         name: "Cucumber",
@@ -178,7 +160,7 @@ export const bunboItems: Food[] = [
         name: "Peanuts",
       },
       {
-        name: "Fish Sauce",
+        name: "Sweetened Fish Sauce",
       },
     ],
   },

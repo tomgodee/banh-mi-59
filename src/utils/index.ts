@@ -11,7 +11,7 @@ import milk_coffee from "@/public/milk_coffee.jpg";
 import orange_juice from "@/public/orange_juice.jpg";
 import passion_fruit from "@/public/passion_fruit.jpg";
 import pineapple_juice from "@/public/pineapple_juice.jpg";
-import sausage_baguette from "@/public/sausage_baguette.jpg";
+import ham_baguette from "@/public/ham_baguette.jpg";
 import soy_milk from "@/public/soy_milk.jpg";
 import tofu_baguette from "@/public/tofu_baguette.jpg";
 import traditional_baguette from "@/public/traditional_baguette.jpg";
@@ -26,8 +26,8 @@ export const getImage = (src: string) => {
       return chicken_baguette;
     case "egg_baguette":
       return egg_baguette;
-    case "sausage_baguette":
-      return sausage_baguette;
+    case "ham_baguette":
+      return ham_baguette;
     case "tofu_baguette":
       return tofu_baguette;
     case "traditional_baguette":

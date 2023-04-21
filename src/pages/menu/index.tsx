@@ -33,7 +33,7 @@ export default function Menu() {
   }, [bunboRef, baguetteRef, router.query.name]);
 
   return (
-    <Flex mx={[6, 16, 20, 24, 40, 80]} mt={8} flexDirection="column">
+    <Flex mx={[10, 16, 20, 24, 40, 80]} mt={8} flexDirection="column">
       <Box position="relative" py={4} ref={baguetteRef}>
         <Text
           color="orange-500"

@@ -19,7 +19,7 @@ export const Header = () => {
       flexDirection={screenSize === "xs" ? "column" : "row"}
       py={4}
     >
-      <Box ml={[6, 16, 20, 24, 40, 80]}>
+      <Box ml={[10, 16, 20, 24, 40, 80]}>
         <Link as={NextLink} href="/">
           <Image
             src={logo}
@@ -31,7 +31,7 @@ export const Header = () => {
         </Link>
       </Box>
 
-      <Flex mt={[4, 0]} ml={[6, 0]} mr={[0, 16, 20, 24, 40, 80]}>
+      <Flex mt={[4, 0]} ml={[10, 0]} mr={[0, 16, 20, 24, 40, 80]}>
         <nav>
           <ul className={styles.headerNavList}>
             <li>

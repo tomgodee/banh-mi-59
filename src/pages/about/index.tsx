@@ -15,9 +15,9 @@ export default function About() {
         priority
         alt="Hero image"
         aria-label="Hero image"
-        style={{ width: "100%" }}
+        style={{ width: "100%", minHeight: 150 }}
       />
-      <Flex mx={[6, 16, 20, 24, 40, 80]} mt={8} flexDirection="column">
+      <Flex mx={[10, 16, 20, 24, 40, 80]} mt={8} flexDirection="column">
         <Flex
           justifyContent="stretch"
           flexDirection={screenSize === "md" ? "column" : "row"}

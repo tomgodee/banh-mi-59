@@ -28,7 +28,7 @@ const menuItems = [{ name: "Bún Bò Nam Bộ" }, { name: "Vietnamese Baguette" 
 const foods = [
   {
     name: "Beef Baguette",
-    price: "35.000đ",
+    price: "30.000đ",
     image: "beef_baguette",
     ingredients: [
       {
@@ -53,7 +53,7 @@ const foods = [
   },
   {
     name: "Traditional Baguette",
-    price: "30.000đ",
+    price: "20.000đ",
     image: "traditional_baguette",
     ingredients: [
       {
@@ -82,7 +82,7 @@ const foods = [
         name: "Peanuts",
       },
       {
-        name: "Fish Sauce",
+        name: "Sweetened Fish Sauce",
       },
     ],
   },
@@ -92,7 +92,7 @@ export const Body = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedFood, setSelectedFood] = useState<Food>(foods[0]);
 
-  const screenSize = useBreakpointValue({ base: "sm", md: "md" });
+  const screenSize = useBreakpointValue({ base: "sm", md: "md", lg: "lg" });
 
   const handleClickFoodItem = (food: Food) => {
     setSelectedFood(food);
@@ -100,8 +100,41 @@ export const Body = () => {
   };
 
   return (
-    <Flex mx={[6, 16, 20, 24, 40, 80]} mt={8} flexDirection="column">
+    <Flex mx={[10, 16, 20, 24, 40, 80]} mt={8} flexDirection="column">
       <Box position="relative" py={4}>
+        <Text
+          fontSize="4xl"
+          fontWeight="bold"
+          className={styles.titleBestseller}
+        >
+          Bestsellers
+        </Text>
+      </Box>
+
+      <Flex
+        justifyContent="space-between"
+        className={SofiaSans.className}
+        flexWrap="wrap"
+      >
+        {foods.map((food, index) => (
+          <Box
+            key={food.name}
+            width={
+              screenSize === "sm" ? "100%" : screenSize === "md" ? "48%" : "31%"
+            }
+            mb={
+              (screenSize === "sm" || screenSize === "md") &&
+              index !== foods.length - 1
+                ? 8
+                : 0
+            }
+          >
+            <FoodItem food={food} handleClick={handleClickFoodItem} />
+          </Box>
+        ))}
+      </Flex>
+
+      <Box position="relative" py={4} mt={10}>
         <Text
           color="orange-500"
           fontSize="4xl"
@@ -128,32 +161,6 @@ export const Body = () => {
           </Link>
         ))}
       </SimpleGrid>
-
-      <Box position="relative" py={4} mt={10}>
-        <Text
-          fontSize="4xl"
-          fontWeight="bold"
-          className={styles.titleBestseller}
-        >
-          Bestsellers
-        </Text>
-      </Box>
-
-      <Flex
-        justifyContent="space-between"
-        flexDirection={screenSize === "sm" ? "column" : "row"}
-        className={SofiaSans.className}
-      >
-        {foods.map((food, index) => (
-          <Box
-            key={food.name}
-            width={screenSize === "sm" ? "100%" : "31%"}
-            mb={screenSize === "sm" && index !== foods.length - 1 ? 8 : 0}
-          >
-            <FoodItem food={food} handleClick={handleClickFoodItem} />
-          </Box>
-        ))}
-      </Flex>
 
       <FoodModal
         food={selectedFood}

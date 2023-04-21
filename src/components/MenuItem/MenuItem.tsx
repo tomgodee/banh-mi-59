@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-// import menu_baguette from "@/public/menu_baguette.jpg";
 import menu_baguette from "@/public/menu_baguette.jpg";
 import { Box, Text } from "@chakra-ui/react";
 
@@ -19,7 +18,6 @@ export const MenuItem = (props: MenuItemProps) => {
       <Image
         className={styles.menuItemImage}
         src={menu_baguette}
-        height={480}
         priority
         alt={menuItem.name}
         aria-label={menuItem.name}
