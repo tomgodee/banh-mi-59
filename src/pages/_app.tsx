@@ -1,10 +1,12 @@
 import "@/styles/globals.css";
+
 import Head from "next/head";
 
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { CacheProvider } from "@chakra-ui/next-js";
 import { Box, ChakraProvider } from "@chakra-ui/react";
+import { Analytics } from "@vercel/analytics/react";
 
 import theme, { openSans } from "../styles/theme";
 
@@ -36,6 +38,8 @@ export default function App({ Component, pageProps }: AppProps) {
           </Box>
         </ChakraProvider>
       </CacheProvider>
+
+      <Analytics />
     </main>
   );
 }
