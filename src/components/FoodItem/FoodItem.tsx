@@ -27,8 +27,8 @@ export const FoodItem = (props: FoodItemProps) => {
         className={styles.image}
         src={getImage(food.image)}
         priority
-        alt="Beef Baguette"
-        aria-label="Beef Baguette"
+        alt={food.name}
+        aria-label={food.name}
       />
 
       <Text fontSize="2xl" my={4} textAlign="center">
