@@ -2,11 +2,9 @@ import Image from "next/image";
 
 import google_maps from "@/public/google_maps.png";
 import tripadvisor from "@/public/tripadvisor.png";
-import { Box, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
 export const Footer = () => {
-  const screenSize = useBreakpointValue({ base: "xs", sm: "sm" });
-
   return (
     <>
       <Flex
@@ -14,7 +12,7 @@ export const Footer = () => {
         bg="red.50"
         justifyContent="center"
         gap={10}
-        flexDirection={screenSize === "xs" ? "column" : "row"}
+        flexDirection={{ base: "column", sm: "row" }}
       >
         <Box>
           <Text fontWeight="bold" fontSize="lg" mb={4}>

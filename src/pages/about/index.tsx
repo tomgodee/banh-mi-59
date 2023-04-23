@@ -2,11 +2,9 @@ import Image from "next/image";
 
 import banhmi from "@/public/banhmi.jpg";
 import hero from "@/public/hero.jpg";
-import { Box, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
 export default function About() {
-  const screenSize = useBreakpointValue({ base: "md", lg: "lg" });
-
   return (
     <Flex flexDirection="column">
       <Image
@@ -20,16 +18,16 @@ export default function About() {
       <Flex mx={[10, 16, 20, 24, 40, 80]} mt={8} flexDirection="column">
         <Flex
           justifyContent="stretch"
-          flexDirection={screenSize === "md" ? "column" : "row"}
+          flexDirection={{ base: "column", lg: "row" }}
         >
           <Flex
             justifyContent="center"
             alignItems="center"
-            width={screenSize === "md" ? "100%" : "50%"}
+            width={{ base: "100%", lg: "50%" }}
             bg="orange.100"
             py="auto"
           >
-            <Text px={4} py={screenSize === "md" ? 2 : 0} fontSize="lg">
+            <Text px={4} py={{ base: 2, lg: 0 }} fontSize="lg">
               We are a local store dedicated to bringing the authentic taste of
               Vietnamese baguettes to food lovers around the world. Vietnamese
               baguette, also known as Bánh mì, is a culinary creation that has
@@ -47,7 +45,7 @@ export default function About() {
               of Vietnamese baguettes, steeped in history and full of flavor.
             </Text>
           </Flex>
-          <Box width={screenSize === "md" ? "100%" : "50%"}>
+          <Box width={{ base: "100%", lg: "50%" }}>
             <Image
               style={{ height: "100%", width: "100%" }}
               src={banhmi}

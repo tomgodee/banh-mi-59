@@ -2,21 +2,19 @@ import Image from "next/image";
 import NextLink from "next/link";
 
 import logo from "@/public/logo.jpeg";
-import { Box, Flex, Link, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Link } from "@chakra-ui/react";
 
 import styles from "./Header.module.scss";
 
 export const Header = () => {
-  const screenSize = useBreakpointValue({ base: "xs", sm: "sm" });
-
   return (
     <Flex
       justifyContent="space-between"
-      alignItems={screenSize === "xs" ? "flex-start" : "center"}
+      alignItems={{ base: "flex-start", sm: "center" }}
       position="sticky"
       width="100vw"
       className={styles.header}
-      flexDirection={screenSize === "xs" ? "column" : "row"}
+      flexDirection={{ base: "column", sm: "row" }}
       py={4}
     >
       <Box ml={[10, 16, 20, 24, 40, 80]}>

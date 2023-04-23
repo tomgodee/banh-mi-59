@@ -134,9 +134,11 @@ export const Body = () => {
         {foods.map((food, index) => (
           <Box
             key={food.name}
-            width={
-              screenSize === "sm" ? "100%" : screenSize === "md" ? "48%" : "31%"
-            }
+            width={{
+              base: "100%",
+              md: "48%",
+              lg: "31%",
+            }}
             mb={
               (screenSize === "sm" || screenSize === "md") &&
               index !== foods.length - 1
