@@ -9,16 +9,21 @@ export default function Document() {
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-SJCGC0FHMM"
         strategy="afterInteractive"
-      ></Script>
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-SJCGC0FHMM');
-        `}
-      </Script>
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SJCGC0FHMM', {
+            page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
 
       <script type="application/ld+json">
         {`
