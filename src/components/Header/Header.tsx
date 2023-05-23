@@ -1,7 +1,7 @@
 import Image from "next/image";
 import NextLink from "next/link";
 
-import logo from "@/public/logo.jpeg";
+import logo from "@/public/logo.png";
 import { Box, Flex, Link } from "@chakra-ui/react";
 
 import styles from "./Header.module.scss";
@@ -22,8 +22,8 @@ export const Header = () => {
           <Image
             src={logo}
             alt="Logo"
-            width={90}
-            height={90}
+            width={140}
+            height={140}
             aria-label="Banh mi 59 homepage"
           />
         </Link>
